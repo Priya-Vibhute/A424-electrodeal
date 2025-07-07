@@ -22,7 +22,11 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home),
+    path('',views.home,name='home'),
+    path('login/',views.login,name="login"),
+    path('register/',views.register,name="register"),
+    path('about/',views.about,name="about"),
+    path('contact/',views.contact,name="contact"),
     path('products/',include('products.urls')),
     path('cart/',include('cart.urls'))
 ]
