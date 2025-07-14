@@ -449,7 +449,9 @@
 
             <!-- store products -->
             <div class="row">
-              {% for product in products %} 
+
+               <h1>{{category}}</h1>
+              {% for product in category.product_set.all %} 
                    {% include "products/product_card.html" with p=product %} 
               {% endfor %}
             </div>
